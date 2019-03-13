@@ -30,9 +30,11 @@ class Example {
     }
 
     private initMockServer() {
-        const response: any = new this.proto.ExampleResponse.constructor({msg: "the response message"});
+
         const implementations = {
             ex1: (call: any, callback: any) => {
+                const response: any =
+                    new this.proto.ExampleResponse.constructor({msg: "the response message"});
                 callback(null, response);
             },
         };
