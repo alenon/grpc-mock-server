@@ -1,0 +1,46 @@
+{
+  "name": "grpc-mock-server",
+  "version": "1.0.0",
+  "description": "gRPC mock server written on typescript",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "/dist"
+  ],
+  "scripts": {
+    "build": "rm -rf ./dist && tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alenon/grpc-mock-server.git"
+  },
+  "keywords": [
+    "grpc",
+    "mock",
+    "server",
+    "typescript"
+  ],
+  "author": "Yevdo Abramov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alenon/grpc-mock-server/issues"
+  },
+  "homepage": "https://github.com/alenon/grpc-mock-server#readme",
+  "dependencies": {
+    "@types/debug": "^4.1.2",
+    "@types/google-protobuf": "^3.2.7",
+    "@types/node": "^11.11.3",
+    "@types/protobufjs": "^6.0.0",
+    "debug": "^4.1.1",
+    "google-protobuf": "^3.7.0",
+    "grpc": "^1.19.0",
+    "protobufjs": "^6.8.8"
+  },
+  "devDependencies": {
+    "@grpc/proto-loader": "^0.4.0",
+    "tsconfig": "^7.0.0",
+    "tslint": "^5.14.0",
+    "typescript": "^3.3.3333"
+  }
+}

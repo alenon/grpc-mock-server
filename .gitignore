@@ -1,0 +1,8 @@
+# Compiled binary addons (https://nodejs.org/api/addons.html)
+dist
+
+# Dependency directories
+node_modules
+
+# Intellij
+.idea
