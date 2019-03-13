@@ -1,6 +1,6 @@
 {
   "name": "grpc-mock-server",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "gRPC mock server written on typescript",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -8,7 +8,7 @@
     "/dist"
   ],
   "scripts": {
-    "build": "rm -rf ./dist && tsc",
+    "build": "rm -rf ./dist && tsc --build tsconfig.json",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
