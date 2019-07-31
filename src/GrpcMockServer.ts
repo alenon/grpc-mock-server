@@ -5,10 +5,12 @@ import {ProtoUtils} from "./utils/ProtoUtils";
 
 export class GrpcMockServer {
 
-    public static readonly SERVER_ADDRESS: string = "127.0.0.1:50777";
+    public static SERVER_ADDRESS: string = "127.0.0.1:50777";
     private readonly _server: grpc.Server;
 
-    public constructor() {
+    public constructor(serverAddress?: string) {
+        if(serverAddress)
+            SERVER_ADDRESS = serverAddress;
         this._server = new grpc.Server();
         this.server.bind(GrpcMockServer.SERVER_ADDRESS, grpc.ServerCredentials.createInsecure());
     }
