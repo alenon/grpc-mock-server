@@ -22,6 +22,7 @@ build:
   ci:
     # npm mirrors can sometimes be flacky, better to use shippable_retry
     # http://docs.shippable.com/ci/advancedOptions/retry/
+    - echo "//registry.npmjs.org/:_authToken=\${NPM_TOKEN}" > .npmrc
     - shippable_retry npm install
     - npm run build
   on_success:
