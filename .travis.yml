@@ -1,0 +1,16 @@
+language: node_js
+node_js:
+  - "7"
+
+script: echo "Running tests against $(node -v) ..."
+
+jobs:
+  include:
+    - stage: build package
+      script: npm build
+    - stage: release package
+      deploy:
+        provider: npm
+        api_key: $NPM_API_KEY
+        on:
+          tags: true
