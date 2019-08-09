@@ -1,6 +1,6 @@
 {
   "name": "grpc-mock-server",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "gRPC mock server written on typescript",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
