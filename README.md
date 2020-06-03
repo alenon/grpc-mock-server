@@ -1,6 +1,7 @@
 # grpc-mock-server
 gRPC mock server for tests with typescript definitions.
 
+![NPM CI](https://github.com/alenon/grpc-mock-server/workflows/NPM%20CI/badge.svg)
 
 Usage example:
 ```typescript
