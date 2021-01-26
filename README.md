@@ -3,6 +3,10 @@ gRPC mock server for tests with typescript definitions.
 
 ![NPM CI](https://github.com/alenon/grpc-mock-server/workflows/NPM%20CI/badge.svg)
 
+Installation:
+
+`npm i @alenon/grpc-mock-server`
+
 Usage example:
 ```typescript
 private static readonly PROTO_PATH: string = __dirname + "example.proto";
