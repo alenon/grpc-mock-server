@@ -18,10 +18,11 @@ export class GrpcMockServer {
     protoPath: string,
     pkgName: string,
     serviceName: string,
-    implementations: any
+    implementations: any,
+    protoLoadOptions: any
   ): GrpcMockServer {
     const pkgDef: any = grpc.loadPackageDefinition(
-      proto_loader.loadSync(protoPath)
+      proto_loader.loadSync(protoPath, protoLoadOptions)
     );
     const proto: any = ProtoUtils.getProtoFromPkgDefinition(pkgName, pkgDef);
 
