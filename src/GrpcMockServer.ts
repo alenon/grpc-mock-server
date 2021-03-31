@@ -19,7 +19,7 @@ export class GrpcMockServer {
     pkgName: string,
     serviceName: string,
     implementations: any,
-    protoLoadOptions: any
+    protoLoadOptions?: any
   ): GrpcMockServer {
     const pkgDef: any = grpc.loadPackageDefinition(
       proto_loader.loadSync(protoPath, protoLoadOptions)
