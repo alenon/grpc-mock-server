@@ -5,6 +5,8 @@ gRPC mock server for tests with typescript definitions.
 
 Installation:
 
+[NPM link](https://www.npmjs.com/package/@alenon/grpc-mock-server)
+
 `npm i @alenon/grpc-mock-server`
 
 Usage example:
