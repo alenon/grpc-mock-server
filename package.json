@@ -30,7 +30,7 @@
   "dependencies": {
     "@types/debug": "^4.1.5",
     "@types/google-protobuf": "^3.7.4",
-    "@types/node": "^15.0.2",
+    "@types/node": "^16.4.3",
     "@types/protobufjs": "^6.0.0",
     "debug": "^4.3.1",
     "google-protobuf": "^3.14.0",
