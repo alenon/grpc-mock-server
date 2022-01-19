@@ -1,6 +1,6 @@
 import * as proto_loader from "@grpc/proto-loader";
 import * as log from "debug";
-import * as grpc from "grpc";
+import * as grpc from "@grpc/grpc-js";
 import { ProtoUtils } from "./utils/ProtoUtils";
 
 export class GrpcMockServer {
