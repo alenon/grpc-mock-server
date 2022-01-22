@@ -9,15 +9,8 @@ Installation:
 
 `npm i @alenon/grpc-mock-server`
 
-Migrating from 1.x to 1.3.x:
-1. Change grpc dependecy from this
-```typescript
-import * as grpc from "grpc";
-```
-to this:
-```typescript
-import * as grpc from "@grpc/grpc-js";
-```
+Migrating from 1.x to 2.x:
+1. Change grpc dependecy from this `import * as grpc from "grpc";` by this: `import * as grpc from "@grpc/grpc-js";`
 
 2. A callback function is a must to be provided, upon GrpcMockServer instance cunstruction:
 ```typescript
