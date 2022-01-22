@@ -6,12 +6,9 @@ import { ProtoUtils } from "./utils/ProtoUtils";
 export class GrpcMockServer {
   private readonly _server: grpc.Server;
 
-  public constructor(public serverAddress: string = "127.0.0.1:50777") {
+  public constructor(callback: (error: Error | null, port: number) => void, public serverAddress: string = "127.0.0.1:50777") {
     this._server = new grpc.Server();
-    this.server.bind(
-      this.serverAddress,
-      grpc.ServerCredentials.createInsecure()
-    );
+    this.server.bindAsync(this.serverAddress, grpc.ServerCredentials.createInsecure(), callback);
   }
 
   public addService(
