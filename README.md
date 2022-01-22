@@ -9,6 +9,28 @@ Installation:
 
 `npm i @alenon/grpc-mock-server`
 
+Migrating from 1.x to 1.3.x:
+1. Change grpc dependecy from this
+```typescript
+import * as grpc from "grpc";
+```
+to this:
+```typescript
+import * as grpc from "@grpc/grpc-js";
+```
+
+2. A callback function is a must to be provided, upon GrpcMockServer instance cunstruction:
+```typescript
+this.server = new GrpcMockServer((error: Error | null, port: Number) => {
+    if(error) {
+        throw new Error("Failed initializing Mock GRPC server on port: " + port);
+    } else {
+        console.log("Mock GRPC server is listening on port: " + port);
+        this.initMockServer();
+    }
+}, "127.0.0.1:50777");
+```          
+
 Usage example:
 ```typescript
 private static readonly PROTO_PATH: string = __dirname + "example.proto";

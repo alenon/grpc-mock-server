@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package com.alenon.example;
+
+service ExampleService {
+    rpc ex1 (ExampleRequest) returns (ExampleResponse) {}
+}
+
+message ExampleRequest {
+    string msg = 1;
+}
+
+message ExampleResponse {
+    string msg = 1;
+}
