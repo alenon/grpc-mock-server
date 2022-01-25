@@ -43,32 +43,29 @@ export class GrpcMockServer {
 
   public async start(): Promise<GrpcMockServer> {
     log.debug('Starting gRPC mock server ...');
-    await this.bind();
-    this.server.start();
-    return this;
-  }
 
-  public async stop(): Promise<GrpcMockServer> {
-    log.debug('Stopping gRPC mock server ...');
-    await this.shutdown();
-    return this;
-  }
-
-  private async bind(): Promise<number> {
-    return new Promise((resolve, reject) => {
+    await new Promise<number>((resolve, reject) => {
       this.server.bindAsync(
         this.serverAddress,
         grpc.ServerCredentials.createInsecure(),
         (error, port) => error ? reject(error) : resolve(port)
       );
     });
+
+    this.server.start();
+
+    return this;
   }
 
-  private async shutdown(): Promise<void> {
-    return new Promise((resolve, reject) => {
+  public async stop(): Promise<GrpcMockServer> {
+    log.debug('Stopping gRPC mock server ...');
+
+    await new Promise<void>((resolve, reject) => {
       this.server.tryShutdown(
         (error) => error ? reject(error) : resolve()
       );
     });
+
+    return this;
   }
 }

@@ -12,17 +12,25 @@ Installation:
 Migrating from 1.x to 2.x:
 1. Change grpc dependecy from this `import * as grpc from "grpc";` by this: `import * as grpc from "@grpc/grpc-js";`
 
-2. A callback function is a must to be provided, upon GrpcMockServer instance cunstruction:
+2. Handle `start` and `stop` functions which are now asynchronous and return Promises:
 ```typescript
-this.server = new GrpcMockServer((error: Error | null, port: Number) => {
-    if(error) {
-        throw new Error("Failed initializing Mock GRPC server on port: " + port);
-    } else {
-        console.log("Mock GRPC server is listening on port: " + port);
-        this.initMockServer();
-    }
-}, "127.0.0.1:50777");
-```          
+this.server = new GrpcMockServer();
+
+// async / await
+try {
+    await this.server.start();
+    console.log('do work...');
+    await this.server.stop();
+} catch (error) {
+    console.log(error);
+}
+
+// standard promises
+this.server.start()
+    .then(() => { console.log('do work...') })
+    .then(() => { this.server.stop() })
+    .catch((error) => console.log(error));
+```
 
 Usage example:
 ```typescript
@@ -31,7 +39,7 @@ private static readonly PKG_NAME: string = "com.alenon.example";
 private static readonly SERVICE_NAME: string = "ExampleService";
 
 ...
-    
+
 const implementations = {
     ex1: (call: any, callback: any) => {
         const response: any =
