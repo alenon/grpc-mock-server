@@ -27,8 +27,8 @@ try {
 
 // standard promises
 this.server.start()
-    .then(() => { console.log('do work...') })
-    .then(() => { this.server.stop() })
+    .then(() => console.log('do work...'))
+    .then(() => this.server.stop())
     .catch((error) => console.log(error));
 ```
 
