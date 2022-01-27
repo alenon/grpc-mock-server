@@ -9,7 +9,7 @@ Installation:
 
 `npm i @alenon/grpc-mock-server`
 
-Migrating from 1.x to 2.x:
+Migrating from 1.x to 3.x:
 1. Change grpc dependecy from this `import * as grpc from "grpc";` by this: `import * as grpc from "@grpc/grpc-js";`
 
 2. Handle `start` and `stop` functions which are now asynchronous and return Promises:
