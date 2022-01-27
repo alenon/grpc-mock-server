@@ -20,20 +20,12 @@ class Example {
       this.pkgDef
     );
 
-    this.server = new GrpcMockServer((error: Error | null, port: number) => {
-      if (error) {
-        throw new Error(
-          'Failed initializing Mock GRPC server on port: ' + port
-        );
-      } else {
-        console.log('Mock GRPC server is listening on port: ' + port);
-        this.initMockServer();
-        this.run();
-      }
-    });
+    this.server = new GrpcMockServer();
   }
 
-  public run(): void {
+  public async run(): Promise<void> {
+    await this.initMockServer();
+
     const client: any = new this.proto.ExampleService(
       '127.0.0.1:50777',
       grpc.credentials.createInsecure()
@@ -42,13 +34,18 @@ class Example {
       msg: 'the message'
     });
 
-    client.ex1(request, (error: any, response: any) => {
-      console.log(response.msg);
-      this.server.stop();
+    const response = await new Promise<any>((resolve, reject) => {
+      client.ex1(request, (error: any, response: any) => {
+        error ? reject(error) : resolve(response);
+      });
     });
+
+    console.log(response.msg);
+
+    await this.server.stop();
   }
 
-  private initMockServer() {
+  private async initMockServer() {
     const implementations = {
       ex1: (call: any, callback: any) => {
         const response: any = new this.proto.ExampleResponse.constructor({
@@ -64,7 +61,13 @@ class Example {
       Example.SERVICE_NAME,
       implementations
     );
-    this.server.start();
+
+    try {
+      await this.server.start();
+      console.log(`Mock GRPC server is listening at: ${this.server.serverAddress}`);
+    } catch (error) {
+      throw new Error(`Failed initializing Mock GRPC server at: ${this.server.serverAddress}`);
+    }
   }
 }
 

@@ -7,15 +7,9 @@ export class GrpcMockServer {
   private readonly _server: grpc.Server;
 
   public constructor(
-    callback: (error: Error | null, port: number) => void,
-    public serverAddress: string = '127.0.0.1:50777'
+    public readonly serverAddress: string = '127.0.0.1:50777'
   ) {
     this._server = new grpc.Server();
-    this.server.bindAsync(
-      this.serverAddress,
-      grpc.ServerCredentials.createInsecure(),
-      callback
-    );
   }
 
   public addService(
@@ -47,15 +41,31 @@ export class GrpcMockServer {
     return this._server;
   }
 
-  public start(): GrpcMockServer {
+  public async start(): Promise<GrpcMockServer> {
     log.debug('Starting gRPC mock server ...');
+
+    await new Promise<number>((resolve, reject) => {
+      this.server.bindAsync(
+        this.serverAddress,
+        grpc.ServerCredentials.createInsecure(),
+        (error, port) => error ? reject(error) : resolve(port)
+      );
+    });
+
     this.server.start();
+
     return this;
   }
 
-  public stop(): GrpcMockServer {
+  public async stop(): Promise<GrpcMockServer> {
     log.debug('Stopping gRPC mock server ...');
-    this.server.forceShutdown();
+
+    await new Promise<void>((resolve, reject) => {
+      this.server.tryShutdown(
+        (error) => error ? reject(error) : resolve()
+      );
+    });
+
     return this;
   }
 }
