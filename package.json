@@ -33,7 +33,7 @@
     "@grpc/grpc-js": "^1.8.8",
     "@types/debug": "^4.1.5",
     "@types/google-protobuf": "^3.7.4",
-    "@types/node": "^18.16.4",
+    "@types/node": "^20.2.4",
     "debug": "^4.3.1",
     "google-protobuf": "^3.14.0",
     "protobufjs": "^7.2.1"
