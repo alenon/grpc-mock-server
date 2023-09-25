@@ -1,3 +1,11 @@
+<a name="3.1.3"></a>
+# [3.1.3](https://github.com/alenon/grpc-mock-server/releases/tag/3.1.3) - 25 Sep 2023
+
+**Full Changelog**: https://github.com/alenon/grpc-mock-server/compare/3.1.2...3.1.3
+
+[Changes][3.1.3]
+
+
 <a name="3.1.2"></a>
 # [3.1.2](https://github.com/alenon/grpc-mock-server/releases/tag/3.1.2) - 25 Sep 2023
 
@@ -763,6 +771,7 @@ Publishing to Github Packages now
 [Changes][v1.0.0]
 
 
+[3.1.3]: https://github.com/alenon/grpc-mock-server/compare/3.1.2...3.1.3
 [3.1.2]: https://github.com/alenon/grpc-mock-server/compare/3.1.1...3.1.2
 [3.1.1]: https://github.com/alenon/grpc-mock-server/compare/3.1.0...3.1.1
 [3.1.0]: https://github.com/alenon/grpc-mock-server/compare/3.0.22...3.1.0
