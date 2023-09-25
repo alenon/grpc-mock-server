@@ -1,6 +1,6 @@
 {
   "name": "@alenon/grpc-mock-server",
-  "version": "3.1.1",
+  "version": "3.1.2",
   "description": "gRPC mock server written on typescript",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
