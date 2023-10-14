@@ -1,3 +1,24 @@
+<a name="3.1.4"></a>
+# [3.1.4](https://github.com/alenon/grpc-mock-server/releases/tag/3.1.4) - 14 Oct 2023
+
+## What's Changed
+* build(deps-dev): bump @typescript-eslint/eslint-plugin from 6.7.2 to 6.7.3 by [@dependabot](https://github.com/dependabot) in https://github.com/alenon/grpc-mock-server/pull/642
+* build(deps): bump @grpc/grpc-js from 1.9.2 to 1.9.4 by [@dependabot](https://github.com/dependabot) in https://github.com/alenon/grpc-mock-server/pull/647
+* build(deps-dev): bump @typescript-eslint/parser from 6.7.0 to 6.7.3 by [@dependabot](https://github.com/dependabot) in https://github.com/alenon/grpc-mock-server/pull/646
+* build(deps-dev): bump eslint from 8.49.0 to 8.50.0 by [@dependabot](https://github.com/dependabot) in https://github.com/alenon/grpc-mock-server/pull/643
+* build(deps): bump @types/google-protobuf from 3.15.6 to 3.15.7 by [@dependabot](https://github.com/dependabot) in https://github.com/alenon/grpc-mock-server/pull/645
+* build(deps): bump @types/node from 20.6.5 to 20.8.5 by [@dependabot](https://github.com/dependabot) in https://github.com/alenon/grpc-mock-server/pull/658
+* build(deps-dev): bump @typescript-eslint/eslint-plugin from 6.7.3 to 6.7.5 by [@dependabot](https://github.com/dependabot) in https://github.com/alenon/grpc-mock-server/pull/656
+* build(deps-dev): bump @typescript-eslint/parser from 6.7.3 to 6.7.5 by [@dependabot](https://github.com/dependabot) in https://github.com/alenon/grpc-mock-server/pull/655
+* build(deps): bump @grpc/grpc-js from 1.9.4 to 1.9.5 by [@dependabot](https://github.com/dependabot) in https://github.com/alenon/grpc-mock-server/pull/653
+* build(deps): bump @types/debug from 4.1.8 to 4.1.9 by [@dependabot](https://github.com/dependabot) in https://github.com/alenon/grpc-mock-server/pull/649
+
+
+**Full Changelog**: https://github.com/alenon/grpc-mock-server/compare/3.1.3...3.1.4
+
+[Changes][3.1.4]
+
+
 <a name="3.1.3"></a>
 # [3.1.3](https://github.com/alenon/grpc-mock-server/releases/tag/3.1.3) - 25 Sep 2023
 
@@ -771,6 +792,7 @@ Publishing to Github Packages now
 [Changes][v1.0.0]
 
 
+[3.1.4]: https://github.com/alenon/grpc-mock-server/compare/3.1.3...3.1.4
 [3.1.3]: https://github.com/alenon/grpc-mock-server/compare/3.1.2...3.1.3
 [3.1.2]: https://github.com/alenon/grpc-mock-server/compare/3.1.1...3.1.2
 [3.1.1]: https://github.com/alenon/grpc-mock-server/compare/3.1.0...3.1.1
