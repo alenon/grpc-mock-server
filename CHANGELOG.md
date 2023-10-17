@@ -1,3 +1,19 @@
+<a name="3.1.5"></a>
+# [3.1.5](https://github.com/alenon/grpc-mock-server/releases/tag/3.1.5) - 17 Oct 2023
+
+## What's Changed
+* build(deps-dev): bump @typescript-eslint/parser from 6.7.5 to 6.8.0 by [@dependabot](https://github.com/dependabot) in https://github.com/alenon/grpc-mock-server/pull/662
+* build(deps-dev): bump eslint from 8.50.0 to 8.51.0 by [@dependabot](https://github.com/dependabot) in https://github.com/alenon/grpc-mock-server/pull/659
+* build(deps): bump @types/node from 20.8.5 to 20.8.6 by [@dependabot](https://github.com/dependabot) in https://github.com/alenon/grpc-mock-server/pull/660
+* build(deps-dev): bump @typescript-eslint/eslint-plugin from 6.7.5 to 6.8.0 by [@dependabot](https://github.com/dependabot) in https://github.com/alenon/grpc-mock-server/pull/661
+* build(deps-dev): bump @babel/traverse from 7.22.15 to 7.23.2 by [@dependabot](https://github.com/dependabot) in https://github.com/alenon/grpc-mock-server/pull/663
+
+
+**Full Changelog**: https://github.com/alenon/grpc-mock-server/compare/3.1.4...3.1.5
+
+[Changes][3.1.5]
+
+
 <a name="3.1.4"></a>
 # [3.1.4](https://github.com/alenon/grpc-mock-server/releases/tag/3.1.4) - 14 Oct 2023
 
@@ -792,6 +808,7 @@ Publishing to Github Packages now
 [Changes][v1.0.0]
 
 
+[3.1.5]: https://github.com/alenon/grpc-mock-server/compare/3.1.4...3.1.5
 [3.1.4]: https://github.com/alenon/grpc-mock-server/compare/3.1.3...3.1.4
 [3.1.3]: https://github.com/alenon/grpc-mock-server/compare/3.1.2...3.1.3
 [3.1.2]: https://github.com/alenon/grpc-mock-server/compare/3.1.1...3.1.2
