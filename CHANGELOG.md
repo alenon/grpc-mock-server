@@ -1,3 +1,18 @@
+<a name="3.1.6"></a>
+# [3.1.6](https://github.com/alenon/grpc-mock-server/releases/tag/3.1.6) - 21 Oct 2023
+
+## What's Changed
+* build(deps): bump @types/debug from 4.1.9 to 4.1.10 by [@dependabot](https://github.com/dependabot) in https://github.com/alenon/grpc-mock-server/pull/667
+* build(deps): bump @types/google-protobuf from 3.15.7 to 3.15.9 by [@dependabot](https://github.com/dependabot) in https://github.com/alenon/grpc-mock-server/pull/669
+* build(deps): bump @types/node from 20.8.6 to 20.8.7 by [@dependabot](https://github.com/dependabot) in https://github.com/alenon/grpc-mock-server/pull/668
+* build(deps-dev): bump @types/jest from 29.5.5 to 29.5.6 by [@dependabot](https://github.com/dependabot) in https://github.com/alenon/grpc-mock-server/pull/666
+
+
+**Full Changelog**: https://github.com/alenon/grpc-mock-server/compare/3.1.5...3.1.6
+
+[Changes][3.1.6]
+
+
 <a name="3.1.5"></a>
 # [3.1.5](https://github.com/alenon/grpc-mock-server/releases/tag/3.1.5) - 17 Oct 2023
 
@@ -808,6 +823,7 @@ Publishing to Github Packages now
 [Changes][v1.0.0]
 
 
+[3.1.6]: https://github.com/alenon/grpc-mock-server/compare/3.1.5...3.1.6
 [3.1.5]: https://github.com/alenon/grpc-mock-server/compare/3.1.4...3.1.5
 [3.1.4]: https://github.com/alenon/grpc-mock-server/compare/3.1.3...3.1.4
 [3.1.3]: https://github.com/alenon/grpc-mock-server/compare/3.1.2...3.1.3
