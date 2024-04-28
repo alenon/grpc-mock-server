@@ -1,3 +1,45 @@
+<a name="3.1.11"></a>
+# [3.1.11](https://github.com/alenon/grpc-mock-server/releases/tag/3.1.11) - 28 Apr 2024
+
+## What's Changed
+* build(deps): bump @types/node from 20.12.4 to 20.12.7 by [@dependabot](https://github.com/dependabot) in https://github.com/alenon/grpc-mock-server/pull/804
+* build(deps-dev): bump typescript from 5.4.3 to 5.4.5 by [@dependabot](https://github.com/dependabot) in https://github.com/alenon/grpc-mock-server/pull/805
+* build(deps-dev): bump @typescript-eslint/parser from 6.21.0 to 7.7.1 by [@dependabot](https://github.com/dependabot) in https://github.com/alenon/grpc-mock-server/pull/807
+
+
+**Full Changelog**: https://github.com/alenon/grpc-mock-server/compare/3.1.10...3.1.11
+
+[Changes][3.1.11]
+
+
+<a name="3.1.10"></a>
+# [3.1.10](https://github.com/alenon/grpc-mock-server/releases/tag/3.1.10) - 05 Apr 2024
+
+## What's Changed
+* build(deps): bump @grpc/grpc-js from 1.10.0 to 1.10.1 by [@dependabot](https://github.com/dependabot) in https://github.com/alenon/grpc-mock-server/pull/769
+* build(deps): bump @types/node from 20.11.17 to 20.11.19 by [@dependabot](https://github.com/dependabot) in https://github.com/alenon/grpc-mock-server/pull/768
+* build(deps-dev): bump @typescript-eslint/eslint-plugin from 6.21.0 to 7.0.0 by [@dependabot](https://github.com/dependabot) in https://github.com/alenon/grpc-mock-server/pull/767
+* build(deps): bump @types/node from 20.11.19 to 20.11.20 by [@dependabot](https://github.com/dependabot) in https://github.com/alenon/grpc-mock-server/pull/771
+* build(deps-dev): bump eslint from 8.56.0 to 8.57.0 by [@dependabot](https://github.com/dependabot) in https://github.com/alenon/grpc-mock-server/pull/772
+* build(deps): bump @types/node from 20.11.20 to 20.11.24 by [@dependabot](https://github.com/dependabot) in https://github.com/alenon/grpc-mock-server/pull/776
+* build(deps): bump @grpc/grpc-js from 1.10.1 to 1.10.2 by [@dependabot](https://github.com/dependabot) in https://github.com/alenon/grpc-mock-server/pull/782
+* build(deps-dev): bump typescript from 5.3.3 to 5.4.2 by [@dependabot](https://github.com/dependabot) in https://github.com/alenon/grpc-mock-server/pull/779
+* build(deps): bump @types/node from 20.11.24 to 20.11.28 by [@dependabot](https://github.com/dependabot) in https://github.com/alenon/grpc-mock-server/pull/784
+* build(deps): bump @grpc/grpc-js from 1.10.2 to 1.10.3 by [@dependabot](https://github.com/dependabot) in https://github.com/alenon/grpc-mock-server/pull/785
+* build(deps-dev): bump typescript from 5.4.2 to 5.4.3 by [@dependabot](https://github.com/dependabot) in https://github.com/alenon/grpc-mock-server/pull/789
+* build(deps): bump @types/node from 20.11.28 to 20.11.30 by [@dependabot](https://github.com/dependabot) in https://github.com/alenon/grpc-mock-server/pull/788
+* build(deps): bump @grpc/grpc-js from 1.10.3 to 1.10.4 by [@dependabot](https://github.com/dependabot) in https://github.com/alenon/grpc-mock-server/pull/792
+* build(deps-dev): bump @grpc/proto-loader from 0.7.10 to 0.7.11 by [@dependabot](https://github.com/dependabot) in https://github.com/alenon/grpc-mock-server/pull/791
+* build(deps): bump @grpc/grpc-js from 1.10.4 to 1.10.6 by [@dependabot](https://github.com/dependabot) in https://github.com/alenon/grpc-mock-server/pull/799
+* build(deps): bump @types/node from 20.11.30 to 20.12.4 by [@dependabot](https://github.com/dependabot) in https://github.com/alenon/grpc-mock-server/pull/798
+* build(deps-dev): bump @grpc/proto-loader from 0.7.11 to 0.7.12 by [@dependabot](https://github.com/dependabot) in https://github.com/alenon/grpc-mock-server/pull/793
+
+
+**Full Changelog**: https://github.com/alenon/grpc-mock-server/compare/3.1.9...3.1.10
+
+[Changes][3.1.10]
+
+
 <a name="3.1.9"></a>
 # [3.1.9](https://github.com/alenon/grpc-mock-server/releases/tag/3.1.9) - 11 Feb 2024
 
@@ -917,6 +959,8 @@ Publishing to Github Packages now
 [Changes][v1.0.0]
 
 
+[3.1.11]: https://github.com/alenon/grpc-mock-server/compare/3.1.10...3.1.11
+[3.1.10]: https://github.com/alenon/grpc-mock-server/compare/3.1.9...3.1.10
 [3.1.9]: https://github.com/alenon/grpc-mock-server/compare/3.1.8...3.1.9
 [3.1.8]: https://github.com/alenon/grpc-mock-server/compare/3.1.7...3.1.8
 [3.1.7]: https://github.com/alenon/grpc-mock-server/compare/3.1.6...3.1.7
