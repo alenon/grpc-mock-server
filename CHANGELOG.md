@@ -1,3 +1,18 @@
+<a name="3.1.13"></a>
+# [3.1.13](https://github.com/alenon/grpc-mock-server/releases/tag/3.1.13) - 06 Jul 2024
+
+## What's Changed
+* build(deps): bump @grpc/grpc-js from 1.10.9 to 1.10.10 by [@dependabot](https://github.com/dependabot) in https://github.com/alenon/grpc-mock-server/pull/854
+* build(deps-dev): bump typescript from 5.5.2 to 5.5.3 by [@dependabot](https://github.com/dependabot) in https://github.com/alenon/grpc-mock-server/pull/855
+* build(deps-dev): bump @typescript-eslint/eslint-plugin from 7.14.1 to 7.15.0 by [@dependabot](https://github.com/dependabot) in https://github.com/alenon/grpc-mock-server/pull/856
+* build(deps-dev): bump @typescript-eslint/parser from 7.14.1 to 7.15.0 by [@dependabot](https://github.com/dependabot) in https://github.com/alenon/grpc-mock-server/pull/857
+
+
+**Full Changelog**: https://github.com/alenon/grpc-mock-server/compare/3.1.12...3.1.13
+
+[Changes][3.1.13]
+
+
 <a name="3.1.12"></a>
 # [3.1.12](https://github.com/alenon/grpc-mock-server/releases/tag/3.1.12) - 29 Jun 2024
 
@@ -1001,6 +1016,7 @@ Publishing to Github Packages now
 [Changes][v1.0.0]
 
 
+[3.1.13]: https://github.com/alenon/grpc-mock-server/compare/3.1.12...3.1.13
 [3.1.12]: https://github.com/alenon/grpc-mock-server/compare/3.1.11...3.1.12
 [3.1.11]: https://github.com/alenon/grpc-mock-server/compare/3.1.10...3.1.11
 [3.1.10]: https://github.com/alenon/grpc-mock-server/compare/3.1.9...3.1.10
