@@ -1,3 +1,27 @@
+<a name="3.1.14"></a>
+# [3.1.14](https://github.com/alenon/grpc-mock-server/releases/tag/3.1.14) - 29 Aug 2024
+
+## What's Changed
+* build(deps): bump @types/node from 20.14.9 to 20.14.10 by [@dependabot](https://github.com/dependabot) in https://github.com/alenon/grpc-mock-server/pull/858
+* build(deps-dev): bump ts-jest from 29.1.5 to 29.2.2 by [@dependabot](https://github.com/dependabot) in https://github.com/alenon/grpc-mock-server/pull/863
+* build(deps-dev): bump @typescript-eslint/eslint-plugin from 7.15.0 to 7.16.1 by [@dependabot](https://github.com/dependabot) in https://github.com/alenon/grpc-mock-server/pull/865
+* build(deps): bump @grpc/grpc-js from 1.10.10 to 1.11.1 by [@dependabot](https://github.com/dependabot) in https://github.com/alenon/grpc-mock-server/pull/867
+* build(deps): bump google-protobuf from 3.21.2 to 3.21.4 by [@dependabot](https://github.com/dependabot) in https://github.com/alenon/grpc-mock-server/pull/869
+* build(deps-dev): bump prettier from 3.3.2 to 3.3.3 by [@dependabot](https://github.com/dependabot) in https://github.com/alenon/grpc-mock-server/pull/870
+* build(deps-dev): bump ts-jest from 29.2.2 to 29.2.3 by [@dependabot](https://github.com/dependabot) in https://github.com/alenon/grpc-mock-server/pull/871
+* build(deps-dev): bump @typescript-eslint/parser from 7.15.0 to 7.17.0 by [@dependabot](https://github.com/dependabot) in https://github.com/alenon/grpc-mock-server/pull/872
+* build(deps): bump @types/node from 20.14.10 to 22.0.0 by [@dependabot](https://github.com/dependabot) in https://github.com/alenon/grpc-mock-server/pull/874
+* build(deps): bump debug from 4.3.5 to 4.3.6 by [@dependabot](https://github.com/dependabot) in https://github.com/alenon/grpc-mock-server/pull/875
+* build(deps-dev): bump @typescript-eslint/parser from 7.17.0 to 7.18.0 by [@dependabot](https://github.com/dependabot) in https://github.com/alenon/grpc-mock-server/pull/876
+* build(deps-dev): bump typescript from 5.5.3 to 5.5.4 by [@dependabot](https://github.com/dependabot) in https://github.com/alenon/grpc-mock-server/pull/877
+* build(deps): bump @types/node from 22.0.0 to 22.5.1 by [@dependabot](https://github.com/dependabot) in https://github.com/alenon/grpc-mock-server/pull/895
+
+
+**Full Changelog**: https://github.com/alenon/grpc-mock-server/compare/3.1.13...3.1.14
+
+[Changes][3.1.14]
+
+
 <a name="3.1.13"></a>
 # [3.1.13](https://github.com/alenon/grpc-mock-server/releases/tag/3.1.13) - 06 Jul 2024
 
@@ -1016,6 +1040,7 @@ Publishing to Github Packages now
 [Changes][v1.0.0]
 
 
+[3.1.14]: https://github.com/alenon/grpc-mock-server/compare/3.1.13...3.1.14
 [3.1.13]: https://github.com/alenon/grpc-mock-server/compare/3.1.12...3.1.13
 [3.1.12]: https://github.com/alenon/grpc-mock-server/compare/3.1.11...3.1.12
 [3.1.11]: https://github.com/alenon/grpc-mock-server/compare/3.1.10...3.1.11
