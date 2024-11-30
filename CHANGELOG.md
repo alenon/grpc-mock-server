@@ -1,3 +1,17 @@
+<a id="3.1.17"></a>
+# [3.1.17](https://github.com/alenon/grpc-mock-server/releases/tag/3.1.17) - 2024-11-30
+
+## What's Changed
+* build(deps): bump @types/node from 22.9.0 to 22.10.1 by [@dependabot](https://github.com/dependabot) in [#951](https://github.com/alenon/grpc-mock-server/pull/951)
+* build(deps-dev): bump prettier from 3.3.3 to 3.4.1 by [@dependabot](https://github.com/dependabot) in [#950](https://github.com/alenon/grpc-mock-server/pull/950)
+* build(deps-dev): bump typescript from 5.6.3 to 5.7.2 by [@dependabot](https://github.com/dependabot) in [#946](https://github.com/alenon/grpc-mock-server/pull/946)
+
+
+**Full Changelog**: https://github.com/alenon/grpc-mock-server/compare/3.1.16...3.1.17
+
+[Changes][3.1.17]
+
+
 <a id="3.1.16"></a>
 # [3.1.16](https://github.com/alenon/grpc-mock-server/releases/tag/3.1.16) - 2024-11-15
 
@@ -1078,6 +1092,7 @@ Publishing to Github Packages now
 [Changes][v1.0.0]
 
 
+[3.1.17]: https://github.com/alenon/grpc-mock-server/compare/3.1.16...3.1.17
 [3.1.16]: https://github.com/alenon/grpc-mock-server/compare/3.1.15...3.1.16
 [3.1.15]: https://github.com/alenon/grpc-mock-server/compare/3.1.14...3.1.15
 [3.1.14]: https://github.com/alenon/grpc-mock-server/compare/3.1.13...3.1.14
