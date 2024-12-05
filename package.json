@@ -30,7 +30,7 @@
   },
   "homepage": "https://github.com/alenon/grpc-mock-server#readme",
   "dependencies": {
-    "@grpc/grpc-js": "1.12.2",
+    "@grpc/grpc-js": "1.12.4",
     "@types/debug": "^4.1.8",
     "@types/google-protobuf": "^3.15.12",
     "@types/node": "^22.0.0",
