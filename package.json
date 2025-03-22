@@ -9,6 +9,8 @@
   ],
   "scripts": {
     "build": "rm -rf ./dist && tsc --build tsconfig.json",
+    "generate": "protoc --plugin=protoc-gen-ts_proto=./node_modules/.bin/protoc-gen-ts_proto --ts_proto_out=src/generated --ts_proto_opt=outputServices=grpc-js -I . example.proto",
+    "start": "npm run generate && ts-node ./example/example.ts",
     "test": "jest",
     "lint": "eslint . --ext .ts --fix",
     "prettier": "prettier --config .prettierrc 'src/**/*.ts' 'example/**/*.ts' 'tests/**/*.ts' --write"

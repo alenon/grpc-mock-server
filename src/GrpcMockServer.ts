@@ -6,9 +6,7 @@ import { ProtoUtils } from './utils/ProtoUtils';
 export class GrpcMockServer {
   private readonly _server: grpc.Server;
 
-  public constructor(
-    public readonly serverAddress: string = '127.0.0.1:50777'
-  ) {
+  constructor(readonly serverAddress: string = '127.0.0.1:50777') {
     this._server = new grpc.Server();
   }
 
@@ -19,10 +17,10 @@ export class GrpcMockServer {
     implementations: any,
     protoLoadOptions?: any
   ): GrpcMockServer {
-    const pkgDef: grpc.GrpcObject = grpc.loadPackageDefinition(
+    const pkgDef = grpc.loadPackageDefinition(
       proto_loader.loadSync(protoPath, protoLoadOptions)
     );
-    const proto: any = ProtoUtils.getProtoFromPkgDefinition(pkgName, pkgDef);
+    const proto = ProtoUtils.getProtoFromPkgDefinition(pkgName, pkgDef);
 
     if (!proto) {
       throw new Error('Seems like the package name is wrong.');
@@ -32,7 +30,7 @@ export class GrpcMockServer {
       throw new Error('Seems like the service name is wrong.');
     }
 
-    const service: any = proto[serviceName].service;
+    const service = proto[serviceName].service;
     this.server.addService(service, implementations);
     return this;
   }
@@ -42,7 +40,7 @@ export class GrpcMockServer {
   }
 
   public async start(): Promise<GrpcMockServer> {
-    log.debug('Starting gRPC mock server ...');
+    log('grpc-mock-server')('Starting gRPC mock server ...');
 
     await new Promise<number>((resolve, reject) => {
       this.server.bindAsync(
@@ -58,7 +56,7 @@ export class GrpcMockServer {
   }
 
   public async stop(): Promise<GrpcMockServer> {
-    log.debug('Stopping gRPC mock server ...');
+    log('grpc-mock-server')('Stopping gRPC mock server ...');
 
     await new Promise<void>((resolve, reject) => {
       this.server.tryShutdown(
