@@ -1,3 +1,25 @@
+<a id="3.1.22"></a>
+# [3.1.22](https://github.com/alenon/grpc-mock-server/releases/tag/3.1.22) - 2025-05-10
+
+## What's Changed
+* build(deps-dev): bump prettier from 3.4.2 to 3.5.3 by [@dependabot](https://github.com/dependabot) in [#1016](https://github.com/alenon/grpc-mock-server/pull/1016)
+* build(deps-dev): bump typescript from 5.7.3 to 5.8.2 by [@dependabot](https://github.com/dependabot) in [#1017](https://github.com/alenon/grpc-mock-server/pull/1017)
+* build(deps-dev): bump ts-jest from 29.2.5 to 29.2.6 by [@dependabot](https://github.com/dependabot) in [#1018](https://github.com/alenon/grpc-mock-server/pull/1018)
+* build(deps-dev): bump @typescript-eslint/parser from 8.26.1 to 8.27.0 by [@dependabot](https://github.com/dependabot) in [#1019](https://github.com/alenon/grpc-mock-server/pull/1019)
+* build(deps-dev): bump @typescript-eslint/eslint-plugin from 8.26.1 to 8.27.0 by [@dependabot](https://github.com/dependabot) in [#1020](https://github.com/alenon/grpc-mock-server/pull/1020)
+* build(deps): bump @grpc/grpc-js from 1.13.0 to 1.13.3 by [@dependabot](https://github.com/dependabot) in [#1036](https://github.com/alenon/grpc-mock-server/pull/1036)
+* build(deps-dev): bump ts-jest from 29.2.6 to 29.3.2 by [@dependabot](https://github.com/dependabot) in [#1040](https://github.com/alenon/grpc-mock-server/pull/1040)
+* [Snyk] Upgrade @types/node from 22.13.10 to 22.13.11 by [@alenon](https://github.com/alenon) in [#1037](https://github.com/alenon/grpc-mock-server/pull/1037)
+* build(deps): bump @types/node from 22.13.10 to 22.15.17 by [@dependabot](https://github.com/dependabot) in [#1053](https://github.com/alenon/grpc-mock-server/pull/1053)
+* build(deps-dev): bump @typescript-eslint/eslint-plugin from 8.27.0 to 8.32.0 by [@dependabot](https://github.com/dependabot) in [#1050](https://github.com/alenon/grpc-mock-server/pull/1050)
+* build(deps-dev): bump eslint from 9.22.0 to 9.26.0 by [@dependabot](https://github.com/dependabot) in [#1048](https://github.com/alenon/grpc-mock-server/pull/1048)
+
+
+**Full Changelog**: https://github.com/alenon/grpc-mock-server/compare/3.1.21...3.1.22
+
+[Changes][3.1.22]
+
+
 <a id="3.1.21"></a>
 # [3.1.21](https://github.com/alenon/grpc-mock-server/releases/tag/3.1.21) - 2025-03-14
 
@@ -1144,6 +1166,7 @@ Publishing to Github Packages now
 [Changes][1.1.0]
 
 
+[3.1.22]: https://github.com/alenon/grpc-mock-server/compare/3.1.21...3.1.22
 [3.1.21]: https://github.com/alenon/grpc-mock-server/compare/3.1.20...3.1.21
 [3.1.20]: https://github.com/alenon/grpc-mock-server/compare/3.1.19...3.1.20
 [3.1.19]: https://github.com/alenon/grpc-mock-server/compare/3.1.18...3.1.19
