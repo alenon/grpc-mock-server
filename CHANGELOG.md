@@ -1,3 +1,20 @@
+<a id="3.1.23"></a>
+# [3.1.23](https://github.com/alenon/grpc-mock-server/releases/tag/3.1.23) - 2025-05-31
+
+## What's Changed
+* [Snyk] Upgrade protobufjs from 7.4.0 to 7.5.0 by [@alenon](https://github.com/alenon) in [#1054](https://github.com/alenon/grpc-mock-server/pull/1054)
+* build(deps-dev): bump typescript from 5.8.2 to 5.8.3 by [@dependabot](https://github.com/dependabot) in [#1056](https://github.com/alenon/grpc-mock-server/pull/1056)
+* build(deps-dev): bump @grpc/proto-loader from 0.7.13 to 0.7.15 by [@dependabot](https://github.com/dependabot) in [#1058](https://github.com/alenon/grpc-mock-server/pull/1058)
+* build(deps-dev): bump @typescript-eslint/parser from 8.27.0 to 8.33.0 by [@dependabot](https://github.com/dependabot) in [#1062](https://github.com/alenon/grpc-mock-server/pull/1062)
+* build(deps): bump protobufjs from 7.4.0 to 7.5.3 by [@dependabot](https://github.com/dependabot) in [#1064](https://github.com/alenon/grpc-mock-server/pull/1064)
+* build(deps-dev): bump @typescript-eslint/eslint-plugin from 8.32.0 to 8.33.0 by [@dependabot](https://github.com/dependabot) in [#1063](https://github.com/alenon/grpc-mock-server/pull/1063)
+
+
+**Full Changelog**: https://github.com/alenon/grpc-mock-server/compare/3.1.22...3.1.23
+
+[Changes][3.1.23]
+
+
 <a id="3.1.22"></a>
 # [3.1.22](https://github.com/alenon/grpc-mock-server/releases/tag/3.1.22) - 2025-05-10
 
@@ -1166,6 +1183,7 @@ Publishing to Github Packages now
 [Changes][1.1.0]
 
 
+[3.1.23]: https://github.com/alenon/grpc-mock-server/compare/3.1.22...3.1.23
 [3.1.22]: https://github.com/alenon/grpc-mock-server/compare/3.1.21...3.1.22
 [3.1.21]: https://github.com/alenon/grpc-mock-server/compare/3.1.20...3.1.21
 [3.1.20]: https://github.com/alenon/grpc-mock-server/compare/3.1.19...3.1.20
