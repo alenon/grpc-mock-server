@@ -12,8 +12,26 @@ export class GrpcMockServer {
     this._server = new grpc.Server();
   }
 
+  /**
+   * Adds a gRPC service to the mock server.
+   *
+   * @param protoPath - Path to the proto file, or array of proto file paths (for modular protos).
+   * @param pkgName - The package name defined in the proto.
+   * @param serviceName - The service name defined in the proto.
+   * @param implementations - The service implementation object.
+   * @param protoLoadOptions - Options for proto-loader. Use `includeDirs` to specify import paths for modular protos.
+   * @returns The GrpcMockServer instance.
+   *
+   * Example usage for modular protos:
+   *   server.addService([
+   *     'user/user.proto',
+   *     'common/address.proto'
+   *   ], 'user', 'UserService', impl, {
+   *     includeDirs: ['common']
+   *   });
+   */
   public addService(
-    protoPath: string,
+    protoPath: string | string[],
     pkgName: string,
     serviceName: string,
     implementations: any,
