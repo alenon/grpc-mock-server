@@ -6,3 +6,4 @@ node_modules
 
 # Intellij
 .idea
+tsconfig.tsbuildinfo

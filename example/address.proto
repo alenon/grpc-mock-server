@@ -4,4 +4,6 @@ package common;
 
 message Address {
   string postal_code = 1;
-}
+  string city = 2;
+  string country = 3;
+} 

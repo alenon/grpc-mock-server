@@ -66,7 +66,14 @@ test('should support multi-proto modular import', async () => {
   const SERVICE_NAME = 'UserService';
 
   const pkgDef: grpc.GrpcObject = grpc.loadPackageDefinition(
-    proto_loader.loadSync(PROTO_PATHS, { includeDirs: [__dirname + '/resources'] })
+    proto_loader.loadSync(PROTO_PATHS, { 
+      includeDirs: [__dirname + '/resources'],
+      keepCase: true,
+      longs: String,
+      enums: String,
+      defaults: true,
+      oneofs: true
+    })
   );
   const proto: any = ProtoUtils.getProtoFromPkgDefinition(PKG_NAME, pkgDef);
 
@@ -77,7 +84,14 @@ test('should support multi-proto modular import', async () => {
       callback(null, response);
     }
   };
-  server.addService(PROTO_PATHS, PKG_NAME, SERVICE_NAME, implementations, { includeDirs: [__dirname + '/resources'] });
+  server.addService(PROTO_PATHS, PKG_NAME, SERVICE_NAME, implementations, { 
+    includeDirs: [__dirname + '/resources'],
+    keepCase: true,
+    longs: String,
+    enums: String,
+    defaults: true,
+    oneofs: true
+  });
 
   try {
     await server.start();
