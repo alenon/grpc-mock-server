@@ -11,7 +11,9 @@
     "build": "rm -rf ./dist && tsc --build tsconfig.json",
     "test": "jest",
     "lint": "eslint . --ext .ts --fix",
-    "prettier": "prettier --config .prettierrc 'src/**/*.ts' 'example/**/*.ts' 'tests/**/*.ts' --write"
+    "prettier": "prettier --config .prettierrc 'src/**/*.ts' 'example/**/*.ts' 'tests/**/*.ts' --write",
+    "example": "npm run build && npx ts-node ./example/example.ts",
+    "multi-proto-example": "npm run build && npx ts-node ./example/multi-proto-example.ts"
   },
   "repository": {
     "type": "git",
