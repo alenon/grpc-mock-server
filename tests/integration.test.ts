@@ -56,3 +56,49 @@ test('integration test for the server/client communication', async () => {
 
   await server.stop();
 }, 10000);
+
+test('should support multi-proto modular import', async () => {
+  const PROTO_PATHS = [
+    __dirname + '/resources/user_user.proto',
+    __dirname + '/resources/common_address.proto'
+  ];
+  const PKG_NAME = 'user';
+  const SERVICE_NAME = 'UserService';
+
+  const pkgDef: grpc.GrpcObject = grpc.loadPackageDefinition(
+    proto_loader.loadSync(PROTO_PATHS, { includeDirs: [__dirname + '/resources'] })
+  );
+  const proto: any = ProtoUtils.getProtoFromPkgDefinition(PKG_NAME, pkgDef);
+
+  const server: GrpcMockServer = new GrpcMockServer();
+  const implementations = {
+    GetUser: (call: any, callback: any) => {
+      const response = { user: { name: 'Alice', address: { postal_code: '12345' } } };
+      callback(null, response);
+    }
+  };
+  server.addService(PROTO_PATHS, PKG_NAME, SERVICE_NAME, implementations, { includeDirs: [__dirname + '/resources'] });
+
+  try {
+    await server.start();
+  } catch (error) {
+    throw new Error(`Failed initializing Mock GRPC server at: ${server.serverAddress}`)
+  }
+
+  const client: any = new proto.UserService(
+    '127.0.0.1:50777',
+    grpc.credentials.createInsecure()
+  );
+
+  const request = { id: '1' };
+  const response = await new Promise<any>((resolve, reject) => {
+    client.GetUser(request, (error: any, response: any) => {
+      error ? reject(error) : resolve(response);
+    });
+  });
+
+  expect(response.user.name).toBe('Alice');
+  expect(response.user.address.postal_code).toBe('12345');
+
+  await server.stop();
+}, 10000);
