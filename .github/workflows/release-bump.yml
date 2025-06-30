@@ -1,0 +1,115 @@
+name: Release Bump
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version bump type'
+        required: true
+        default: 'patch'
+        type: choice
+        options:
+          - patch
+          - minor
+          - major
+
+jobs:
+  bump-version:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: master
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Get current version
+        id: get_version
+        run: |
+          echo "current_version=$(jq -r .version package.json)" >> $GITHUB_OUTPUT
+
+      - name: Create bump branch
+        id: create_branch
+        run: |
+          branch_name=release/bump-v${{ steps.get_version.outputs.current_version }}-to-${{ github.event.inputs.version }}-$(date +%s)
+          git checkout -b "$branch_name"
+          echo "branch_name=$branch_name" >> $GITHUB_OUTPUT
+
+      - name: Bump version in package.json
+        run: |
+          npm version ${{ github.event.inputs.version }} --no-git-tag-version
+
+      - name: Commit version bump
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add package.json package-lock.json || true
+          git commit -m "chore(release): bump version to $(jq -r .version package.json)"
+
+      - name: Push bump branch
+        run: |
+          git push origin HEAD:${{ steps.create_branch.outputs.branch_name }}
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ steps.create_branch.outputs.branch_name }}
+          base: master
+          title: "Release: Bump version to $(jq -r .version package.json)"
+          body: "Automated version bump and release PR."
+
+  release:
+    needs: bump-version
+    if: github.ref == 'refs/heads/master'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: master
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Get new version
+        id: get_version
+        run: |
+          echo "new_version=$(jq -r .version package.json)" >> $GITHUB_OUTPUT
+
+      - name: Create tag
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git tag v${{ steps.get_version.outputs.new_version }}
+          git push origin v${{ steps.get_version.outputs.new_version }}
+
+      - name: Generate release notes
+        id: changelog
+        run: |
+          if [ -f CHANGELOG.md ]; then
+            notes=$(awk '/^## /{p=0} p; /^## v?${{ steps.get_version.outputs.new_version }}/{p=1}' CHANGELOG.md)
+            echo "release_notes<<EOF" >> $GITHUB_OUTPUT
+            echo "$notes" >> $GITHUB_OUTPUT
+            echo "EOF" >> $GITHUB_OUTPUT
+          else
+            notes=$(git log --pretty=format:'* %s' v${{ steps.get_version.outputs.new_version }}^..v${{ steps.get_version.outputs.new_version }})
+            echo "release_notes<<EOF" >> $GITHUB_OUTPUT
+            echo "$notes" >> $GITHUB_OUTPUT
+            echo "EOF" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v${{ steps.get_version.outputs.new_version }}
+          name: v${{ steps.get_version.outputs.new_version }}
+          body: ${{ steps.changelog.outputs.release_notes }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
