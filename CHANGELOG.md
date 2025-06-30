@@ -1,3 +1,24 @@
+<a id="3.2.0"></a>
+# [3.2.0](https://github.com/alenon/grpc-mock-server/releases/tag/3.2.0) - 2025-06-30
+
+## What's Changed
+* feat: support multiple proto files ([#992](https://github.com/alenon/grpc-mock-server/issues/992)) by [@alenon](https://github.com/alenon) in [#1083](https://github.com/alenon/grpc-mock-server/pull/1083)
+
+* build(deps): bump @grpc/grpc-js from 1.13.3 to 1.13.4 by [@dependabot](https://github.com/dependabot) in [#1067](https://github.com/alenon/grpc-mock-server/pull/1067)
+* build(deps): bump debug from 4.4.0 to 4.4.1 by [@dependabot](https://github.com/dependabot) in [#1068](https://github.com/alenon/grpc-mock-server/pull/1068)
+* [Snyk] Upgrade @types/node from 22.15.17 to 22.15.19 by [@alenon](https://github.com/alenon) in [#1072](https://github.com/alenon/grpc-mock-server/pull/1072)
+* build(deps-dev): bump ts-jest from 29.3.2 to 29.4.0 by [@dependabot](https://github.com/dependabot) in [#1075](https://github.com/alenon/grpc-mock-server/pull/1075)
+* build(deps-dev): bump eslint from 9.26.0 to 9.30.0 by [@dependabot](https://github.com/dependabot) in [#1081](https://github.com/alenon/grpc-mock-server/pull/1081)
+* [Snyk] Upgrade debug from 4.4.0 to 4.4.1 by [@alenon](https://github.com/alenon) in [#1073](https://github.com/alenon/grpc-mock-server/pull/1073)
+* [Snyk] Upgrade @grpc/grpc-js from 1.13.3 to 1.13.4 by [@alenon](https://github.com/alenon) in [#1076](https://github.com/alenon/grpc-mock-server/pull/1076)
+* build(deps): bump @types/node from 22.15.17 to 24.0.7 by [@dependabot](https://github.com/dependabot) in [#1082](https://github.com/alenon/grpc-mock-server/pull/1082)
+
+
+**Full Changelog**: https://github.com/alenon/grpc-mock-server/compare/3.1.23...3.2.0
+
+[Changes][3.2.0]
+
+
 <a id="3.1.23"></a>
 # [3.1.23](https://github.com/alenon/grpc-mock-server/releases/tag/3.1.23) - 2025-05-31
 
@@ -1183,6 +1204,7 @@ Publishing to Github Packages now
 [Changes][1.1.0]
 
 
+[3.2.0]: https://github.com/alenon/grpc-mock-server/compare/3.1.23...3.2.0
 [3.1.23]: https://github.com/alenon/grpc-mock-server/compare/3.1.22...3.1.23
 [3.1.22]: https://github.com/alenon/grpc-mock-server/compare/3.1.21...3.1.22
 [3.1.21]: https://github.com/alenon/grpc-mock-server/compare/3.1.20...3.1.21
