@@ -3,6 +3,7 @@
 
 name: NPM Publish
 permissions:
+  id-token: write  # Required for OIDC
   contents: read
   packages: write
 
