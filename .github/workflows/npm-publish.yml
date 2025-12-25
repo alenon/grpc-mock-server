@@ -4,6 +4,7 @@
 name: NPM Publish
 permissions:
   contents: read
+  packages: write
 
 on:
   release:
