@@ -1,3 +1,19 @@
+<a id="3.2.5"></a>
+# [3.2.5](https://github.com/alenon/grpc-mock-server/releases/tag/3.2.5) - 2025-12-25
+
+## What's Changed
+* build(deps-dev): bump eslint from 9.38.0 to 9.39.2 by [@dependabot](https://github.com/dependabot)[bot] in [#1169](https://github.com/alenon/grpc-mock-server/pull/1169)
+* build(deps-dev): bump prettier from 3.6.2 to 3.7.4 by [@dependabot](https://github.com/dependabot)[bot] in [#1170](https://github.com/alenon/grpc-mock-server/pull/1170)
+* build(deps-dev): bump ts-jest from 29.4.4 to 29.4.6 by [@dependabot](https://github.com/dependabot)[bot] in [#1171](https://github.com/alenon/grpc-mock-server/pull/1171)
+* build(deps-dev): bump @typescript-eslint/parser from 8.46.2 to 8.50.1 by [@dependabot](https://github.com/dependabot)[bot] in [#1172](https://github.com/alenon/grpc-mock-server/pull/1172)
+* build(deps-dev): bump typescript from 5.9.2 to 5.9.3 by [@dependabot](https://github.com/dependabot)[bot] in [#1173](https://github.com/alenon/grpc-mock-server/pull/1173)
+
+
+**Full Changelog**: https://github.com/alenon/grpc-mock-server/compare/3.2.4...3.2.5
+
+[Changes][3.2.5]
+
+
 <a id="3.2.4"></a>
 # [3.2.4](https://github.com/alenon/grpc-mock-server/releases/tag/3.2.4) - 2025-12-25
 
@@ -1290,6 +1306,7 @@ Publishing to Github Packages now
 [Changes][1.1.0]
 
 
+[3.2.5]: https://github.com/alenon/grpc-mock-server/compare/3.2.4...3.2.5
 [3.2.4]: https://github.com/alenon/grpc-mock-server/compare/3.2.3...3.2.4
 [3.2.3]: https://github.com/alenon/grpc-mock-server/compare/3.2.2...3.2.3
 [3.2.2]: https://github.com/alenon/grpc-mock-server/compare/3.2.1...3.2.2
