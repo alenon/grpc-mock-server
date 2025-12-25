@@ -15,21 +15,29 @@
 - 🎯 **Simple API** - Clean, intuitive interface
 - 🔄 **Async/Await** - Modern Promise-based API
 
+## 📋 Prerequisites
+
+- Node.js 14+ 
+- TypeScript 4.0+ (optional, but recommended)
+- `@grpc/grpc-js` and `@grpc/proto-loader` (peer dependencies)
+
 ## 📦 Installation
 
 ```bash
-npm install @alenon/grpc-mock-server
+npm install @alenon/grpc-mock-server @grpc/grpc-js @grpc/proto-loader
 ```
 
 Or with yarn:
 
 ```bash
-yarn add @alenon/grpc-mock-server
+yarn add @alenon/grpc-mock-server @grpc/grpc-js @grpc/proto-loader
 ```
+
+**Note:** `@grpc/grpc-js` and `@grpc/proto-loader` are required peer dependencies. Make sure to install them along with this package.
 
 ## 🚀 Quick Start
 
-Create a mock server in just a few lines:
+Create a mock server in just a few lines. This is perfect for testing your gRPC clients without setting up a full server:
 
 ```typescript
 import { GrpcMockServer } from '@alenon/grpc-mock-server';
@@ -96,7 +104,7 @@ async function example() {
   const server = new GrpcMockServer();
 
   // Define implementations
-  const implementations = {
+const implementations = {
     ex1: (call: any, callback: any) => {
       console.log('Received:', call.request.msg);
       callback(null, { msg: 'Hello from mock server!' });
@@ -186,13 +194,17 @@ message Address {
 
 **multi-proto-example.ts:**
 ```typescript
-import { GrpcMockServer } from '@alenon/grpc-mock-server';
+import { GrpcMockServer, ProtoUtils } from '@alenon/grpc-mock-server';
+import * as grpc from '@grpc/grpc-js';
+import * as proto_loader from '@grpc/proto-loader';
 
 async function multiProtoExample() {
   const server = new GrpcMockServer();
 
+  // Define service implementation
   const implementations = {
     GetUser: (call: any, callback: any) => {
+      console.log('GetUser called with ID:', call.request.id);
       callback(null, {
         user: {
           name: 'John Doe',
@@ -225,10 +237,51 @@ async function multiProtoExample() {
     }
   );
 
+  // Start server
   await server.start();
-  // ... use server ...
+  console.log(`Server listening at: ${server.serverAddress}`);
+
+  // Create client with same proto files and options
+  const pkgDef = grpc.loadPackageDefinition(
+    proto_loader.loadSync(
+      [
+        __dirname + '/user.proto',
+        __dirname + '/address.proto'
+      ],
+      {
+        includeDirs: [__dirname],
+        keepCase: true,
+        longs: String,
+        enums: String,
+        defaults: true,
+        oneofs: true
+      }
+    )
+  );
+  const proto = ProtoUtils.getProtoFromPkgDefinition('user', pkgDef);
+  
+  const client = new proto.UserService(
+    server.serverAddress,
+    grpc.credentials.createInsecure()
+  );
+
+  // Make request
+  const response = await new Promise((resolve, reject) => {
+    client.GetUser({ id: '123' }, (error: any, response: any) => {
+      error ? reject(error) : resolve(response);
+    });
+  });
+
+  console.log('User response:', {
+    name: response.user.name,
+    address: response.user.address
+  });
+
+  // Stop server
   await server.stop();
 }
+
+multiProtoExample().catch(console.error);
 ```
 
 ### Testing Example
@@ -289,6 +342,17 @@ describe('ExampleService Tests', () => {
 
 ## 📖 API Reference
 
+### Exports
+
+The package exports the following:
+
+- `GrpcMockServer` - Main class for creating mock gRPC servers
+- `ProtoUtils` - Utility class for working with proto package definitions
+
+```typescript
+import { GrpcMockServer, ProtoUtils } from '@alenon/grpc-mock-server';
+```
+
 ### `GrpcMockServer`
 
 Main class for creating and managing mock gRPC servers.
@@ -343,7 +407,34 @@ Stops the mock server gracefully.
 
 ##### `server`
 
-**Property:** `grpc.Server` - Access to the underlying gRPC server instance.
+**Property:** `grpc.Server` - Access to the underlying gRPC server instance. Use this for advanced scenarios where you need direct access to the gRPC server.
+
+### `ProtoUtils`
+
+Utility class for extracting proto definitions from loaded package definitions.
+
+#### `getProtoFromPkgDefinition(pkgName, pkgDef)`
+
+Extracts a proto package from a loaded package definition.
+
+**Parameters:**
+- `pkgName`: `string` - The package name as defined in your `.proto` file
+- `pkgDef`: `grpc.GrpcObject` - Package definition loaded via `grpc.loadPackageDefinition()`
+
+**Returns:** The proto package object containing your services and messages
+
+**Example:**
+```typescript
+import { ProtoUtils } from '@alenon/grpc-mock-server';
+import * as grpc from '@grpc/grpc-js';
+import * as proto_loader from '@grpc/proto-loader';
+
+const pkgDef = grpc.loadPackageDefinition(
+  proto_loader.loadSync('./example.proto')
+);
+const proto = ProtoUtils.getProtoFromPkgDefinition('com.alenon.example', pkgDef);
+const client = new proto.ExampleService(address, credentials);
+```
 
 ## 🔍 Common Use Cases
 
@@ -428,12 +519,15 @@ MIT License - see [LICENSE](./LICENSE) file for details.
 - [GitHub Repository](https://github.com/alenon/grpc-mock-server)
 - [Issue Tracker](https://github.com/alenon/grpc-mock-server/issues)
 
-## 💡 Tips
+## 💡 Tips & Best Practices
 
-- Always call `stop()` after tests to clean up resources
-- Use `keepCase: true` if your proto files use snake_case naming
-- For complex proto structures, use `defaults: true` and `oneofs: true`
-- The server uses insecure credentials by default (perfect for testing)
+- **Always call `stop()`** after tests to clean up resources and free up ports
+- **Use `keepCase: true`** if your proto files use snake_case naming (e.g., `postal_code`)
+- **For complex proto structures**, use `defaults: true` and `oneofs: true` to handle all field types properly
+- **The server uses insecure credentials** by default (perfect for testing, not for production)
+- **Use `serverAddress` property** to get the actual address the server is listening on
+- **Method chaining** is supported - you can chain `addService()` calls before `start()`
+- **For multiple services**, add them all before calling `start()` for better performance
 
 ---
 
