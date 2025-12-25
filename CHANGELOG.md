@@ -1,22 +1,23 @@
 <a id="3.2.4"></a>
-# [Release 3.2.4](https://github.com/alenon/grpc-mock-server/releases/tag/3.2.4) - 2025-12-25
+# [3.2.4](https://github.com/alenon/grpc-mock-server/releases/tag/3.2.4) - 2025-12-25
 
 ## What's Changed
+* build(deps): bump debug from 4.4.1 to 4.4.3 by [@dependabot](https://github.com/dependabot)[bot] in [#1137](https://github.com/alenon/grpc-mock-server/pull/1137)
+* Potential fix for code scanning alert no. 2: Workflow does not contain permissions by [@alenon](https://github.com/alenon) in [#1149](https://github.com/alenon/grpc-mock-server/pull/1149)
+* build(deps-dev): bump @typescript-eslint/eslint-plugin from 8.43.0 to 8.44.1 by [@dependabot](https://github.com/dependabot)[bot] in [#1148](https://github.com/alenon/grpc-mock-server/pull/1148)
+* build(deps-dev): bump ts-jest from 29.4.1 to 29.4.4 by [@dependabot](https://github.com/dependabot)[bot] in [#1146](https://github.com/alenon/grpc-mock-server/pull/1146)
+* build(deps): bump @types/node from 24.3.1 to 24.5.2 by [@dependabot](https://github.com/dependabot)[bot] in [#1145](https://github.com/alenon/grpc-mock-server/pull/1145)
+* build(deps-dev): bump js-yaml from 3.14.1 to 3.14.2 in the npm_and_yarn group across 1 directory by [@dependabot](https://github.com/dependabot)[bot] in [#1165](https://github.com/alenon/grpc-mock-server/pull/1165)
+* build(deps): bump @grpc/grpc-js from 1.13.4 to 1.14.0 by [@dependabot](https://github.com/dependabot)[bot] in [#1150](https://github.com/alenon/grpc-mock-server/pull/1150)
+* chore: remove custom CodeQL workflow by [@alenon](https://github.com/alenon) in [#1168](https://github.com/alenon/grpc-mock-server/pull/1168)
+* build(deps-dev): bump @typescript-eslint/eslint-plugin from 8.44.1 to 8.46.2 by [@dependabot](https://github.com/dependabot)[bot] in [#1163](https://github.com/alenon/grpc-mock-server/pull/1163)
+* build(deps-dev): bump @typescript-eslint/parser from 8.44.1 to 8.46.2 by [@dependabot](https://github.com/dependabot)[bot] in [#1162](https://github.com/alenon/grpc-mock-server/pull/1162)
+* build(deps-dev): bump eslint from 9.35.0 to 9.38.0 by [@dependabot](https://github.com/dependabot)[bot] in [#1161](https://github.com/alenon/grpc-mock-server/pull/1161)
+* build(deps-dev): bump jest from 30.1.3 to 30.2.0 by [@dependabot](https://github.com/dependabot)[bot] in [#1152](https://github.com/alenon/grpc-mock-server/pull/1152)
+* build(deps): bump glob from 10.4.5 to 10.5.0 in the npm_and_yarn group across 1 directory by [@dependabot](https://github.com/dependabot)[bot] in [#1167](https://github.com/alenon/grpc-mock-server/pull/1167)
 
-### 📦 Dependency Updates
 
-*   build(deps): bump glob in the npm_and_yarn group across 1 directory ([#1167](https://github.com/alenon/grpc-mock-server/issues/1167))
-*   build(deps-dev): bump jest from 30.1.3 to 30.2.0 ([#1152](https://github.com/alenon/grpc-mock-server/issues/1152))
-*   build(deps-dev): bump eslint from 9.35.0 to 9.38.0 ([#1161](https://github.com/alenon/grpc-mock-server/issues/1161))
-*   build(deps-dev): bump @typescript-eslint/parser from 8.44.1 to 8.46.2 ([#1162](https://github.com/alenon/grpc-mock-server/issues/1162))
-*   build(deps-dev): bump @typescript-eslint/eslint-plugin ([#1163](https://github.com/alenon/grpc-mock-server/issues/1163))
-*   build(deps): bump @grpc/grpc-js from 1.13.4 to 1.14.0 ([#1150](https://github.com/alenon/grpc-mock-server/issues/1150))
-*   build(deps-dev): bump js-yaml ([#1165](https://github.com/alenon/grpc-mock-server/issues/1165))
-*   build(deps): bump @types/node from 24.3.1 to 24.5.2
-*   build(deps-dev): bump ts-jest from 29.4.1 to 29.4.4
-*   build(deps-dev): bump @typescript-eslint/eslint-plugin
-*   build(deps): bump debug from 4.4.1 to 4.4.3
-
+**Full Changelog**: https://github.com/alenon/grpc-mock-server/compare/3.2.3...3.2.4
 
 [Changes][3.2.4]
 
