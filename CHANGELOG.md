@@ -1,3 +1,20 @@
+<a id="3.2.6"></a>
+# [3.2.6](https://github.com/alenon/grpc-mock-server/releases/tag/3.2.6) - 2026-02-07
+
+## What's Changed
+* docs: improve README with comprehensive examples and better structure by [@alenon](https://github.com/alenon) in [#1174](https://github.com/alenon/grpc-mock-server/pull/1174)
+* build(deps): bump google-protobuf from 4.0.0 to 4.0.1 by [@dependabot](https://github.com/dependabot)[bot] in [#1179](https://github.com/alenon/grpc-mock-server/pull/1179)
+* build(deps): bump protobufjs from 7.5.4 to 8.0.0 by [@dependabot](https://github.com/dependabot)[bot] in [#1178](https://github.com/alenon/grpc-mock-server/pull/1178)
+* build(deps): bump @grpc/grpc-js from 1.14.0 to 1.14.3 by [@dependabot](https://github.com/dependabot)[bot] in [#1177](https://github.com/alenon/grpc-mock-server/pull/1177)
+* build(deps): bump @types/node from 24.5.2 to 25.0.3 by [@dependabot](https://github.com/dependabot)[bot] in [#1176](https://github.com/alenon/grpc-mock-server/pull/1176)
+* build(deps-dev): bump @typescript-eslint/eslint-plugin from 8.46.2 to 8.50.1 by [@dependabot](https://github.com/dependabot)[bot] in [#1175](https://github.com/alenon/grpc-mock-server/pull/1175)
+
+
+**Full Changelog**: https://github.com/alenon/grpc-mock-server/compare/3.2.5...3.2.6
+
+[Changes][3.2.6]
+
+
 <a id="3.2.5"></a>
 # [3.2.5](https://github.com/alenon/grpc-mock-server/releases/tag/3.2.5) - 2025-12-25
 
@@ -1306,6 +1323,7 @@ Publishing to Github Packages now
 [Changes][1.1.0]
 
 
+[3.2.6]: https://github.com/alenon/grpc-mock-server/compare/3.2.5...3.2.6
 [3.2.5]: https://github.com/alenon/grpc-mock-server/compare/3.2.4...3.2.5
 [3.2.4]: https://github.com/alenon/grpc-mock-server/compare/3.2.3...3.2.4
 [3.2.3]: https://github.com/alenon/grpc-mock-server/compare/3.2.2...3.2.3
