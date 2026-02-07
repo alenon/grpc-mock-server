@@ -38,7 +38,7 @@
     "@types/node": "^24.0.7",
     "debug": "^4.4.1",
     "google-protobuf": "^4.0.0",
-    "protobufjs": "^7.5.0"
+    "protobufjs": "^8.0.0"
   },
   "devDependencies": {
     "@grpc/proto-loader": "^0.8.0",
