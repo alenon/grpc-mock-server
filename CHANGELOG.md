@@ -1,3 +1,21 @@
+<a id="3.2.7"></a>
+# [3.2.7](https://github.com/alenon/grpc-mock-server/releases/tag/3.2.7) - 2026-04-05
+
+## What's Changed
+* Upgrade @types/node from 25.0.3 to 25.0.9 by [@alenon](https://github.com/alenon) in [#1182](https://github.com/alenon/grpc-mock-server/pull/1182)
+* build(deps-dev): bump minimatch from 3.1.2 to 3.1.5 in the npm_and_yarn group across 1 directory by [@dependabot](https://github.com/dependabot)[bot] in [#1189](https://github.com/alenon/grpc-mock-server/pull/1189)
+* build(deps): bump @types/node from 25.0.3 to 25.2.2 by [@dependabot](https://github.com/dependabot)[bot] in [#1187](https://github.com/alenon/grpc-mock-server/pull/1187)
+* build(deps-dev): bump prettier from 3.7.4 to 3.8.1 by [@dependabot](https://github.com/dependabot)[bot] in [#1186](https://github.com/alenon/grpc-mock-server/pull/1186)
+* build(deps-dev): bump the npm_and_yarn group across 1 directory with 3 updates by [@dependabot](https://github.com/dependabot)[bot] in [#1190](https://github.com/alenon/grpc-mock-server/pull/1190)
+* build(deps-dev): bump @typescript-eslint/eslint-plugin from 8.50.1 to 8.54.0 by [@dependabot](https://github.com/dependabot)[bot] in [#1184](https://github.com/alenon/grpc-mock-server/pull/1184)
+* build(deps-dev): bump @typescript-eslint/parser from 8.50.1 to 8.54.0 by [@dependabot](https://github.com/dependabot)[bot] in [#1183](https://github.com/alenon/grpc-mock-server/pull/1183)
+
+
+**Full Changelog**: https://github.com/alenon/grpc-mock-server/compare/3.2.6...3.2.7
+
+[Changes][3.2.7]
+
+
 <a id="3.2.6"></a>
 # [3.2.6](https://github.com/alenon/grpc-mock-server/releases/tag/3.2.6) - 2026-02-07
 
@@ -1323,6 +1341,7 @@ Publishing to Github Packages now
 [Changes][1.1.0]
 
 
+[3.2.7]: https://github.com/alenon/grpc-mock-server/compare/3.2.6...3.2.7
 [3.2.6]: https://github.com/alenon/grpc-mock-server/compare/3.2.5...3.2.6
 [3.2.5]: https://github.com/alenon/grpc-mock-server/compare/3.2.4...3.2.5
 [3.2.4]: https://github.com/alenon/grpc-mock-server/compare/3.2.3...3.2.4
