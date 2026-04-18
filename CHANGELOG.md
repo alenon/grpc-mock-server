@@ -1,3 +1,19 @@
+<a id="3.2.8"></a>
+# [3.2.8](https://github.com/alenon/grpc-mock-server/releases/tag/3.2.8) - 2026-04-18
+
+## What's Changed
+* build(deps): bump the npm_and_yarn group across 1 directory with 1 update by [@dependabot](https://github.com/dependabot)[bot] in [#1196](https://github.com/alenon/grpc-mock-server/pull/1196)
+* build(deps-dev): bump ts-jest from 29.4.6 to 29.4.9 by [@dependabot](https://github.com/dependabot)[bot] in [#1191](https://github.com/alenon/grpc-mock-server/pull/1191)
+* build(deps-dev): bump jest from 30.2.0 to 30.3.0 by [@dependabot](https://github.com/dependabot)[bot] in [#1192](https://github.com/alenon/grpc-mock-server/pull/1192)
+* build(deps-dev): bump @typescript-eslint/eslint-plugin from 8.54.0 to 8.58.0 by [@dependabot](https://github.com/dependabot)[bot] in [#1193](https://github.com/alenon/grpc-mock-server/pull/1193)
+* build(deps-dev): bump eslint from 9.39.2 to 10.2.0 by [@dependabot](https://github.com/dependabot)[bot] in [#1195](https://github.com/alenon/grpc-mock-server/pull/1195)
+
+
+**Full Changelog**: https://github.com/alenon/grpc-mock-server/compare/3.2.7...3.2.8
+
+[Changes][3.2.8]
+
+
 <a id="3.2.7"></a>
 # [3.2.7](https://github.com/alenon/grpc-mock-server/releases/tag/3.2.7) - 2026-04-05
 
@@ -1341,6 +1357,7 @@ Publishing to Github Packages now
 [Changes][1.1.0]
 
 
+[3.2.8]: https://github.com/alenon/grpc-mock-server/compare/3.2.7...3.2.8
 [3.2.7]: https://github.com/alenon/grpc-mock-server/compare/3.2.6...3.2.7
 [3.2.6]: https://github.com/alenon/grpc-mock-server/compare/3.2.5...3.2.6
 [3.2.5]: https://github.com/alenon/grpc-mock-server/compare/3.2.4...3.2.5
