@@ -1,3 +1,18 @@
+<a id="3.2.9"></a>
+# [3.2.9](https://github.com/alenon/grpc-mock-server/releases/tag/3.2.9) - 2026-05-09
+
+## What's Changed
+* build(deps-dev): bump prettier from 3.8.1 to 3.8.3 by [@dependabot](https://github.com/dependabot)[bot] in [#1200](https://github.com/alenon/grpc-mock-server/pull/1200)
+* build(deps): bump @types/node from 25.2.3 to 25.6.0 by [@dependabot](https://github.com/dependabot)[bot] in [#1199](https://github.com/alenon/grpc-mock-server/pull/1199)
+* build(deps): bump google-protobuf from 4.0.1 to 4.0.2 by [@dependabot](https://github.com/dependabot)[bot] in [#1198](https://github.com/alenon/grpc-mock-server/pull/1198)
+* build(deps): bump @types/debug from 4.1.12 to 4.1.13 by [@dependabot](https://github.com/dependabot)[bot] in [#1197](https://github.com/alenon/grpc-mock-server/pull/1197)
+
+
+**Full Changelog**: https://github.com/alenon/grpc-mock-server/compare/3.2.8...3.2.9
+
+[Changes][3.2.9]
+
+
 <a id="3.2.8"></a>
 # [3.2.8](https://github.com/alenon/grpc-mock-server/releases/tag/3.2.8) - 2026-04-18
 
@@ -1357,6 +1372,7 @@ Publishing to Github Packages now
 [Changes][1.1.0]
 
 
+[3.2.9]: https://github.com/alenon/grpc-mock-server/compare/3.2.8...3.2.9
 [3.2.8]: https://github.com/alenon/grpc-mock-server/compare/3.2.7...3.2.8
 [3.2.7]: https://github.com/alenon/grpc-mock-server/compare/3.2.6...3.2.7
 [3.2.6]: https://github.com/alenon/grpc-mock-server/compare/3.2.5...3.2.6
